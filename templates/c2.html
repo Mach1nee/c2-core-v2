@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>C2Core - Command and Control</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>C2Core - Command and Control</h1>
+        </header>
+        <div class="main">
+            <div class="sidebar">
+                <h2>Active Machines</h2>
+                <ul id="machine-list">
+                    {% for machine in machines %}
+                    <li>{{ machine }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="content">
+                <h2>Send Command</h2>
+                <form method="POST">
+                    <select name="machine" required>
+                        {% for machine in machines %}
+                        <option value="{{ machine }}">{{ machine }}</option>
+                        {% endfor %}
+                    </select>
+                    <input type="text" name="command" required placeholder="Enter command">
+                    <input type="submit" value="Send Command">
+                </form>
+                <h2>Command Logs</h2>
+                <ul id="log-list">
+                    {% for log in logs %}
+                    <li>{{ log }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
