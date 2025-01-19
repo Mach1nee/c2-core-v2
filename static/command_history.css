@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Orbitron', sans-serif;
+}
+
+body {
+    background: #0d0d0d;
+    color: #00ff00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    background: #1a1a1a;
+    border: 1px solid #00ff00;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+}
+
+header {
+    background: #0d0d0d;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #00ff00;
+}
+
+header h1 {
+    font-size: 2.5em;
+    color: #00ff00;
+}
+
+.main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.sidebar {
+    width: 30%;
+    background: #0d0d0d;
+    padding: 20px;
+    border-right: 1px solid #00ff00;
+}
+
+.sidebar h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    padding: 10px;
+    margin: 5px 0;
+    background: #1a1a1a;
+    border: 1px solid #00ff00;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.content {
+    width: 70%;
+    padding: 20px;
+}
+
+.content h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+form select,
+form input[type="text"],
+form input[type="submit"] {
+    padding: 10px;
+    border: 1px solid #00ff00;
+    border-radius: 5px;
+    background: #1a1a1a;
+    color: #00ff00;
+}
+
+form input[type="submit"] {
+    cursor: pointer;
+    background: #0d0d0d;
+    transition: background 0.3s;
+}
+
+form input[type="submit"]:hover {
+    background: #00ff00;
+    color: #0d0d0d;
+}
+
+#log-list {
+    list-style: none;
+}
+
+#log-list li {
+    padding: 10px;
+    margin: 5px 0;
+    background: #1a1a1a;
+    border: 1px solid #00ff00;
+    border-radius: 5px;
+}

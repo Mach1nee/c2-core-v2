@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Available Scripts</title>
+</head>
+
+<body>
+    <h1>Available Scripts</h1>
+    <ul>
+        {% for script in scripts %}
+        <li><a href="{{ url_for('download_script', filename=script) }}">{{ script }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+
+</html>

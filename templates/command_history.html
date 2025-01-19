@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='command_history.css') }}">
+    <meta charset="UTF-8">
+    <title>Histórico de Comandos</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Histórico de Comandos</h1>
+        </header>
+
+        <div class="content">
+            <h2>Logs de Comandos</h2>
+            <ul id="log-list">
+                {% for log in logs %}
+                <li>{{ log }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <footer>
+            <a href="{{ url_for('logout') }}">Logout</a>
+        </footer>
+    </div>
+</body>
+
+</html>
